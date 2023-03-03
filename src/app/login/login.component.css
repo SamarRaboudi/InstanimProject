@@ -1,0 +1,277 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    background-image: url("https://www.eastdallasvetclinic.com/sites/default/files/national-cat-lovers-month.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+section .imgBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+section .imgBx::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   /*  background: linear-gradient(225deg,#6e6e6e,#6e6e6e); */
+    z-index: 1;
+    mix-blend-mode: screen;
+   
+
+}
+section .imgBx img{
+    height: 100%;
+    width:100%;
+   /* height: 100%;
+    width:100%;*/
+
+   /* object-fit: cover;*/
+}
+.contextBx{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    height: 100%;
+}
+.formBx{
+    width: 65%;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.title{
+    display: inline-block;
+    color: var(--theWayBlue);
+    font-weight: 700;
+    font-size: 2.5em;
+    margin-bottom: 25px;
+   
+    letter-spacing: 1px;
+    
+}
+.text_field{
+    position: relative;
+    border-bottom: 2px solid var(--theWayBlue);
+    margin: 35px 0;
+
+}
+
+.text_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    
+
+}
+
+.text_field label{
+    position: absolute;
+    top : 50%;
+    left: 5px;
+    color: #47596e;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.text_field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--theWayBlue);
+    transition: -5s;
+}
+.text_field input:focus ~ label,
+.text_field input:valid ~ label{
+    top: -5px;
+    color : #6a86a2;
+}
+.text_field input:focus ~ span::before,
+.text_field input:valid ~ span::before{
+   width: 100%;
+}
+.pass{
+    margin : -5px  0 20px 5px;
+    color: #47596e;
+    cursor: pointer;
+}
+.pass:hover{
+    text-decoration: underline;
+}
+input[type ="submit"]{
+    width: 70%;
+    height: 50px;
+    border: 1px solid var(--theWayBlue);
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor:pointer ;
+    outline:none ;
+    background: var(--theWayBlue);
+    transition: background 0.2s ease-out;
+    color: white;
+
+
+    
+}
+input[type ="submit"]:hover{
+    background:#546272;
+}
+.signup_link{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #47596e;
+}
+.signup_link a{
+    color: #47596e;
+    text-decoration: none;
+}
+.signup_link a:hover{
+    text-decoration: underline;
+    cursor:pointer ;
+}
+.ouDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+hr{
+    width: 60px;
+    border: 1px solid var(--theWayBlue);
+}
+.google{
+    margin-top:20px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50px;
+    border: 1.5px solid var(--theWayBlue);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor:pointer ;
+    outline:none ;
+    background: transparent;
+    transition: border 0.2s ease-out;
+    color: var(--theWayBlue);
+
+}
+.google img{
+    width:30px;
+    margin-right: 10px;
+}
+
+/* .social-media{
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+.social-media li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+.social-media li > img{
+    width: 35px;
+    height: 35px;
+    margin: .6rem;
+    border-radius: 50%;
+}
+.social-media li > img:hover{
+    opacity: 0.6;
+} */
+h3{
+    color:var(--theWayBlue);
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    section{
+        padding: 0 0 4rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+   section .imgBx img{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 100px;
+        height: auto;
+        
+    }
+    section .imgBx::before{
+    background:none
+    }
+    .contextBx{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    .title{
+        margin-bottom: 0;
+        padding-top: 2rem;
+        margin-top:30px;
+    }
+    .formBx{
+        width: 100%;
+        padding:0 40px;
+        margin:20px 50px;
+        background: rgba(red, green, blue, 0.9);
+    }
+ /*   .title,h3{
+        color: white;
+    }
+ 
+    .text_field label, .signup_link a, .signup_link
+    {
+        color: rgb(42, 42, 112);
+    }
+    h3{
+        font-size: 1.1rem;
+    }*/
+}
+@media screen and (max-width: 1200px) {
+    h3{
+        font-size: 1.3rem;
+        text-align: center;
+    }
+}
