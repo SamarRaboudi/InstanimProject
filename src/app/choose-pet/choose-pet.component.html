@@ -1,0 +1,55 @@
+<section class="container">
+    <header class="head">
+        <div class="logoDiv">
+            <img class="logo" src="..\assets\images\animal-care.png" alt="">
+            <p>Instanim</p>
+        </div>
+
+    </header>
+    <div class="content">
+        <div class="welcomeDiv">
+            <h4>Bienvenue sur Instanim !</h4>
+            <h2>Le meilleur réseau social pour les propriétaires d'animaux.</h2>
+            <p>Choisissez la race de votre animal de compagnie et profitez de votre expérience parentale tout en gardant votre meilleur ami heureux, propre et en bonne santé .</p>
+            <button class="continueBtn">Continuez<img src="..\assets\images\right-arrow.png" alt=""></button>
+        </div>
+        <div class="petDiv">
+            <img src="..\assets\images\poppy-removebg.png" alt="poppy image" class="poppy">
+            <img src="..\assets\images\cat-removebg.png" alt="cat image" class="cat">
+            <h2>Enregistrement des animaux</h2>
+            <p>Continuez avec la saisie des informations de votre animal.</p>
+            <form class="petFormDiv" [formGroup]="petForm">
+               <div formArrayName ="pets"   *ngFor="let pet of petArray.controls; let i=index;" >
+                    <div class="form"  [formGroupName]="i"> 
+                        <div id="form-div">
+                            <input type="text" id="petName" name="petName" placeholder="Nom" formControlName="petName" >
+                        </div>
+                        <div id="form-div">
+                            <select id="dropdown" name="petRace" formControlName="petRace" >
+                                <option  value="Race">Race</option>
+                            </select>
+                        </div>
+                        <div id="form-div">
+                            <select id="dropdown" name="petAge" formControlName="petAge" >
+                                <option  value="Age">Age</option>
+                            </select>
+                        </div>
+                        <div id="form-div">
+                            <select id="dropdown" name="petPoids" formControlName="petPoids" >
+                                <option  value="poids">Poids</option>
+                            </select>
+                        </div>
+                  </div>
+                </div> 
+                        <div id="form-div" class="addPetDiv">                    
+                            <button class="addPetBtn" (click)="addPet()">
+                                Ajoutez un animal
+                                <img src="..\assets\images\empreinte-de-patte.png" alt="">
+                            </button>
+                        </div>
+            </form>
+        </div>
+
+
+    </div>
+</section>

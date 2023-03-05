@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Merienda:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Heebo';
+}
+.container{
+    background-color: #d4d0d0;
+    min-height: 100%;
+    max-width: 100%;
+}
+.head{
+    padding: 5px 0;
+    background-color: #fff;
+}
+.head .logoDiv{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content:baseline;
+}
+.head .logoDiv img{
+    width: 40px;
+    margin-right: 10px;
+}
+.head .logoDiv p{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--theWayBlue);
+    font-family:'Merienda';
+}
+.head .logo{
+    width: 50px;
+    height: auto;
+   
+}
+.content{
+   /*  margin-top: 20px; */
+    /* background-image: url("src\assets\images\bgColor.png");
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    padding: 20px 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+} 
+.welcomeDiv{
+    width: 50%;
+    height: 100%;
+}
+.welcomeDiv h4{
+    font-size: 1.75rem;
+    color: #e98654;
+}
+.welcomeDiv h2{
+    font-size: 3rem;
+    font-weight: 700;
+    color: rgb(44, 44, 44);
+}
+.welcomeDiv p{
+    font-size : 1.3rem;
+    line-height: 1.75rem;
+    letter-spacing: .025em;
+    color: rgb(44, 44, 44);
+  /*   font-family: 'Segoe UI'; */
+    margin: 40px 0 40px;
+    padding: 1rem 0;
+}
+.welcomeDiv .continueBtn{
+    margin-top:40px ;   
+    height: 50px;
+    border: 1.5px solid var(--theWayBlue);
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor:pointer ;
+    outline:none ;
+    background: var(--theWayBlue);
+    transition: opacity 0.2s ease-out;
+    color: #fff;
+    padding: 10px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.welcomeDiv .continueBtn:hover{
+    opacity: 70%;
+}
+.welcomeDiv .continueBtn img{
+    width: 20px;
+    margin-left: 15px;
+}
+.petDiv{
+    width: 400px;
+    height: 550px;
+    padding: 10px 20px;
+    background-color: #fff;
+    margin-top: 70px;
+    position: relative;
+    text-align :justify;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+    0 1px 1px rgba(0,0,0,0.11), 
+    0 2px 2px rgba(0,0,0,0.11), 
+    0 3px 4px rgba(0,0,0,0.11),
+    0 4px 8px rgba(0,0,0,0.11);
+}
+.petDiv .poppy{
+    position: absolute;
+    z-index: 1;
+    top: -130px;
+    right:-105px;
+    width: 80%;
+} 
+.petDiv .cat{
+    position: absolute;
+    z-index: 1;
+    bottom: -15px;
+    left:-110px;
+} 
+.petDiv h2{
+    color: var(--theWayBlue);
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+
+}
+.petDiv p{
+    color: rgb(68, 68, 68);
+    margin: 20px 0 15px;
+
+}
+#form-div {
+    padding: 0.5rem 0;
+}
+input,select{
+    margin-bottom :10px;
+    width : 100%;
+    height: 3rem;
+    padding: 8px 12px;
+    border: 0 solid #e4e4e7;
+    background-color: var(--fieldLightGray);
+    border-radius: 5px;
+    color: rgb(44, 44, 44);
+    font-size: 1rem;
+}
+input[type="text"]{
+ min-height: 2rem;
+ font-size: 1rem;
+}
+input[type="text"]::placeholder{
+    color: rgb(44, 44, 44);
+    font-size: 1rem;
+}
+
+.addPetBtn{
+  /*   background-color: #ffb347; */
+    background-color: #e98654;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+}
+.addPetBtn:hover{
+    background-color: #e98654;
+}
+.addPetBtn img{
+    margin-left: 10px;
+    width: 20px;
+}
